@@ -1,38 +1,59 @@
-# sv
+## MyReflection (SvelteKit)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Projekt oparty o SvelteKit, w fazie rozwijania UI dla aplikacji „MyReflection”. 
+Frontend - Svelte 5, Tailwind 4, DaisyUI 5, FlowBite
+Backend (w przygotowaniu) - Appwrite
 
-## Creating a project
+## Technologie
+- Svelte / SvelteKit
+- Vite
+- TypeScript
+- Tailwind CSS + Flowbite / DaisyUI komponenty
+- Vitest (testy jednostkowe) + Playwright (E2E)
+- Adapter: Cloudflare (`@sveltejs/adapter-cloudflare`)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Wymagania
+- Node 18+ (zalecane LTS)
+- pnpm / npm / yarn (przykłady używają pnpm)
 
+## Instalacja
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+pnpm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
+## Testy
+Testy jednostkowe:
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm test:unit
+```
+Pełen zestaw (unit + e2e):
+```sh
+pnpm test
+```
+Testy e2e osobno:
+```sh
+pnpm test:e2e
 ```
 
-## Building
-
-To create a production version of your app:
-
+## Deploy (Cloudflare)
+Projekt ma skonfigurowany adapter Cloudflare. Przykład (jeśli używasz Wrangler):
 ```sh
-npm run build
+pnpm build
+pnpm wrangler deploy
+```
+(Sprawdź ustawienia w `wrangler.toml`).
+
+## Struktura (skrót)
+```
+src/
+	routes/       Strony i layouty SvelteKit
+	lib/          Komponenty, logika kliencka, API client
+static/         Pliki statyczne (favicon, obrazy)
+e2e/            Testy Playwright
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Główne skrypty (package.json)
+```
+dev, build, preview, check, format, lint,
+test:unit, test (łączy unit + e2e), test:e2e
+```

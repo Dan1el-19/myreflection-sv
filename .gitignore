@@ -1,13 +1,55 @@
 test-results
 node_modules
 
-# Output
+# Build Output
 .output
 .vercel
 .netlify
 .wrangler
 /.svelte-kit
 /build
+/.cloudflare
+
+# Tests
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.vitest/
+coverage/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary folders
+tmp/
+temp/
 
 # OS
 .DS_Store
