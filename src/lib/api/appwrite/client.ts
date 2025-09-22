@@ -13,3 +13,4 @@ const account = new Account(client);
 const databases = new Databases(client);
 
 export { client, account, databases };
+export { ID } from 'appwrite';

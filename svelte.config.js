@@ -8,6 +8,9 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter(),
+		alias: {
+			$types: 'src/types'
+		},
 		csp: {
       	mode: 'auto',
       	directives: {

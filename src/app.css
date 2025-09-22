@@ -3,44 +3,103 @@
 @import '@fontsource/fira-mono';
 @plugin '@tailwindcss/typography';
 @plugin "daisyui" {
-	themes: nord --default;
-}
+  themes: noridc;
+};
 @plugin "daisyui/theme" {
-  name: "nord";
+  name: "nordic";
   default: true;
-  --color-primary: #2A4752;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(95.127% 0.007 260.731); /* Main Background */
+  --color-base-200: oklch(93.299% 0.01 261.788); 
+  --color-base-300: oklch(89.925% 0.016 262.749); /* Navbar Background */
+  --color-base-content: oklch(32.437% 0.022 264.182);
+  --color-primary: oklch(0.3798 0.0395 224.13);
+  --color-primary-content: oklch(0.9736 0.0017 67.8);
+  --color-secondary: oklch(69.651% 0.059 248.687);
+  --color-secondary-content: oklch(13.93% 0.011 248.687);
+  --color-accent: oklch(77.464% 0.062 217.469);
+  --color-accent-content: oklch(0.3798 0.0395 224.13);
+  --color-neutral: oklch(45.229% 0.035 264.131);
+  --color-neutral-content: oklch(89.925% 0.016 262.749);
+  --color-info: oklch(69.207% 0.062 332.664);
+  --color-info-content: oklch(13.841% 0.012 332.664);
+  --color-success: oklch(76.827% 0.074 131.063);
+  --color-success-content: oklch(15.365% 0.014 131.063);
+  --color-warning: oklch(85.486% 0.089 84.093);
+  --color-warning-content: oklch(17.097% 0.017 84.093);
+  --color-error: oklch(60.61% 0.12 15.341);
+  --color-error-content: oklch(12.122% 0.024 15.341);
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
+
 @plugin 'flowbite/plugin';
 
-@custom-variant dark (&:where(.dark, .dark *));
+ @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-	--color-c1: #F9FAFB;
-	--color-c2: #FFFFFF;
-	--color-primary-50: #fff5f2;
-	--color-primary-100: #fff1ee;
-	--color-primary-200: #ffe4de;
-	--color-primary-300: #ffd5cc;
-	--color-primary-400: #ffbcad;
-	--color-primary-500: #fe795d;
-	--color-primary-600: #ef562f;
-	--color-primary-700: #eb4f27;
-	--color-primary-800: #cc4522;
-	--color-primary-900: #a5371b;
+ @theme {
+  --font-sans: 'Inter', 'sans-serif';
+  --font-display: 'Space Grotesk', 'sans-serif';
+ };
 
-	--color-secondary-50: #f0f9ff;
-	--color-secondary-100: #e0f2fe;
-	--color-secondary-200: #bae6fd;
-	--color-secondary-300: #7dd3fc;
-	--color-secondary-400: #38bdf8;
-	--color-secondary-500: #0ea5e9;
-	--color-secondary-600: #0284c7;
-	--color-secondary-700: #0369a1;
-	--color-secondary-800: #075985;
-	--color-secondary-900: #0c4a6e; 
-	--font-sans: 'Inter', 'sans-serif';
-  	--font-display: 'Space Grotesk', 'sans-serif';
-}
+/*@theme {
+  --color-primary-50: #f0f6f8;
+  --color-primary-100: #dceaf0;
+  --color-primary-200: #b9d5e1;
+  --color-primary-300: #94bfd0;
+  --color-primary-400: #6fa6be;
+  --color-primary-500: #4d8ca9;
+  --color-primary-600: #396e8a;
+  --color-primary-700: #2A4752;
+  --color-primary-800: #1f353e;
+  --color-primary-900: #152329;
+
+  --color-secondary-50: #f0f9ff;
+  --color-secondary-100: #e0f2fe;
+  --color-secondary-200: #bae6fd;
+  --color-secondary-300: #7dd3fc;
+  --color-secondary-400: #38bdf8;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-600: #0284c7;
+  --color-secondary-700: #0369a1;
+  --color-secondary-800: #075985;
+  --color-secondary-900: #0c4a6e;
+
+    Kolory Akcentu (Szałwiowa zieleń)
+  --color-accent-50: #f4f7f4;
+  --color-accent-100: #e5eae4;
+  --color-accent-200: #cdd6cb;
+  --color-accent-300: #b1beac;
+  --color-accent-400: #96a68e;
+  --color-accent-500: #84a98c;
+  --color-accent-600: #6a8770;
+  --color-accent-700: #506655;
+  --color-accent-800: #37453b;
+  --color-accent-900: #1e251f;
+
+    Kolory Neutralne (Ciepła szarość)
+  --color-neutral-50: #f7f6f5;
+  --color-neutral-100: #eceae8;
+  --color-neutral-200: #d9d6d2;
+  --color-neutral-300: #c2bcb6;
+  --color-neutral-400: #a9a29b;
+  --color-neutral-500: #8e867d;
+  --color-neutral-600: #706961;
+  --color-neutral-700: #544f49;
+  --color-neutral-800: #3a3531;
+  --color-neutral-900: #201d1a;
+
+  Twoje fonty (bez zmian)
+  --font-sans: 'Inter', 'sans-serif';
+  --font-display: 'Space Grotesk', 'sans-serif';
+} */
 
 @source "../node_modules/flowbite-svelte/dist";
 @source "../node_modules/flowbite-svelte-icons/dist";
