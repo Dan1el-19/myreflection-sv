@@ -1,4 +1,4 @@
-import { client } from "$lib/api/sanity/client";
+import { getClient } from "$lib/api/sanity/client";
 import type { Services, PageData } from "$types/sanity";
 import type { PageLoad } from "./$types";
 
@@ -14,7 +14,7 @@ export const load: PageLoad = async (): Promise<PageData> => {
       opis
     }`;
     
-    const services: Services[] = await client.fetch(query);
+    const services: Services[] = await getClient().fetch(query);
     
     return {
       services
@@ -26,4 +26,3 @@ export const load: PageLoad = async (): Promise<PageData> => {
     };
   }
 };
-      

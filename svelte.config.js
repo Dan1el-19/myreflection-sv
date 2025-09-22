@@ -15,7 +15,7 @@ const config = {
       	mode: 'auto',
       	directives: {
         'script-src': ['self'],
-        'style-src': ['self', 'fonts.googleapis.com'],
+        'style-src': ['self', 'fonts.googleapis.com', 'sha256-S8qMpvofolR8Mpjy4kQvEm7m1q8clzU4dfDH0AmvZjo='],
         'font-src': ['self', 'fonts.gstatic.com']
       }
 	}

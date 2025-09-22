@@ -63,8 +63,7 @@ svelte/
   │   ├── routes/
   │   ├── types/
   │   ├── app.html
-  │   ├── global.css
-  │   └── hooks.server.ts
+  │   └── global.css
   ├── static/
   ├── .env.local  
   ├── svelte.config.js

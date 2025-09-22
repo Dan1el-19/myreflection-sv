@@ -24,7 +24,7 @@
         {#each data.services as service (service._id)}
           <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
           <article
-            class="card bg-base-100 shadow-sm border border-base-300/50 hover:shadow-md hover:border-primary/40 transition-all duration-200 focus-within:ring focus-within:ring-primary/30"
+            class="card bg-base-100 shadow-sm border border-base-300/50 hover:shadow-md hover:border-primary/40 transition-all duration-200 focus-within:ring focus-within:ring-primary/30 focus:outline-2 focus:outline-primary/50 focus:outline-offset-2"
             tabindex="0"
           >
             <div class="card-body p-5 flex flex-col gap-3">
@@ -73,13 +73,5 @@
     {/if}
   </div>
 </section>
-
-<style>
-  /* Opcjonalny lekki focus outline dla klawiatury */
-  article:focus {
-    outline: 2px solid hsl(var(--p) / 0.5);
-    outline-offset: 2px;
-  }
-</style>
 
 

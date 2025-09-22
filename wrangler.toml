@@ -2,5 +2,3 @@ name = "myreflection"
 main = "./.cloudflare/worker.js"
 compatibility_date = "2025-09-22"
 assets = { directory = "./.cloudflare/assets", binding = "ASSETS" }
-
-[vars]

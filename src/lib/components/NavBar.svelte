@@ -105,38 +105,3 @@
     <li><VisitButton size="md" href="umow-wizyte" label="Umów wizytę" /></li>
   </ul>
 </nav>
-
-<style>
-.nav-link {
-  position: relative;
-  padding: 0.5rem 0.25rem;
-  transition: color .3s ease;
-}
-.nav-link:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(42, 71, 82, 0.4);
-  border-radius: 4px;
-}
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 4px;
-  width: 0;
-  height: 2px;
-  background: #2A4752;
-  border-radius: 2px;
-  transition: width .35s ease, left .35s ease, transform .35s ease;
-  transform: translateX(-50%);
-}
-.nav-link:hover,
-.nav-link:focus-visible {
-  color: #2A4752;
-}
-.nav-link:hover::after,
-.nav-link:focus-visible::after {
-  width: 100%;
-  left: 0;
-  transform: translateX(0);
-}
-</style>
