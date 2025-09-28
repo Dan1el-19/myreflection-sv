@@ -2,8 +2,12 @@
   import type { PageData } from './$types';  
   export let data: PageData;
 </script>
-
+<svelte:head>
+  <title>Oferta - Joanna Rudzińska-Łodyga</title>
+  <meta name="description" content="Poznaj ofertę terapii online Joanny Rudzińskiej-Łodygi. Terapia indywidualna, par i rodzin. Wsparcie emocjonalne, w relacjach i w rozwoju osobistym." />
+</svelte:head>
 <!-- Sekcja główna -->
+ 
 <section class="py-6 sm:py-8">
   <div class="mx-auto max-w-screen-xl px-4">
     <header class="mb-6 sm:mb-10">
